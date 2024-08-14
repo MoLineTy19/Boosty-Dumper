@@ -1,7 +1,7 @@
 # Boosty Dumper by MoLineTy19
 
 <!--Установка-->
-## Установка
+# Установка
 1. Клонирование репозитория
 ```git clone https://github.com/MoLineTy19/Boosty-Dumper```
 2. Переход в директорию
