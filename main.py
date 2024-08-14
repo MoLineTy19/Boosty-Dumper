@@ -80,7 +80,6 @@ def download_data(data_json: json, headers: dict, image_d: bool, video_d: bool, 
                 download_image(search_author, media['id'])
             if media['type'] == 'ok_video' and video_d == True:
                 download_video(search_author, media, headers)
-            print()
 
 
 def info_by_account(headers: dict):
