@@ -62,11 +62,32 @@ jobs:
 
       - name: Publish GitHub Release
         # Только при теге v* — для обычного пуша в main релиза не будет.
+        #
+        # Используем gh CLI вместо softprops/action-gh-release: при повторном
+        # запуске на том же теге action падал с «release assets name has already
+        # taken», т.к. не умеет перезаписывать одноимённые ассеты. Флаг
+        # --clobber у gh именно для этого. gh предустановлен на windows-latest.
         if: startsWith(github.ref, 'refs/tags/v')
-        uses: softprops/action-gh-release@v2
-        with:
-          files: |
-            dist/BoostyDumper.exe
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          tag="${GITHUB_REF#refs/tags/}"
+
+          # Создаём релиз, если его ещё нет на этом теге.
+          if gh release view "$tag" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "Release $tag уже существует — обновляем ассеты."
+          else
+            gh release create "$tag" \
+              --repo "$GITHUB_REPOSITORY" \
+              --title "$tag" \
+              --generate-notes
+          fi
+
+          # --clobber перезаписывает BoostyDumper.exe/.sha256, если они уже есть.
+          gh release upload "$tag" \
+            --repo "$GITHUB_REPOSITORY" \
+            --clobber \
+            dist/BoostyDumper.exe \
             dist/BoostyDumper.exe.sha256
-          generate_release_notes: true
-          fail_on_unmatched_files: true

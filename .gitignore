@@ -31,6 +31,11 @@ downloads/.logs/
 *.swp
 *.swo
 
+# --- Тестирование ---
+.pytest_cache/
+.coverage
+htmlcov/
+
 # --- Инструменты агента (не часть проекта) ---
 .zcode/
 .agents/
