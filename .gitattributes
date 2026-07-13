@@ -1,0 +1,22 @@
+# Единые правила окончаний строк для кросс-платформенной разработки.
+# Текстовые файлы хранятся в git с LF, при checkout на Windows конвертируются в CRLF.
+
+*        text=auto eol=lf
+
+# Бинарные файлы — никакой конвертации.
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.ico    binary
+*.icns   binary
+*.pdf    binary
+*.zip    binary
+*.rar    binary
+*.7z     binary
+*.mp4    binary
+*.mp3    binary
+*.wav    binary
+*.exe    binary
+*.dll    binary
+*.pyd    binary
