@@ -68,7 +68,7 @@ class DownloadService:
 
         service = DownloadService(client, config)
         stats = service.download_blog(
-            blog="xcharodeykax",
+            blog="exampleblog",
             on_progress=lambda d, t: print(f"{d}/{t}"),
             on_log=print,
         )
