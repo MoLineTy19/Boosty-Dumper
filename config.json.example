@@ -1,0 +1,9 @@
+{
+  "token": "ВСТАВЬТЕ_СЮДА_BEARER_ТОКЕН",
+  "output_dir": "downloads",
+  "max_workers": 4,
+  "download_images": true,
+  "download_videos": true,
+  "skip_existing": true,
+  "request_timeout": 30.0
+}

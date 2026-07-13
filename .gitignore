@@ -1,0 +1,41 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Виртуальные окружения
+.venv/
+venv/
+env/
+ENV/
+
+# --- Сборка PyInstaller ---
+build/
+dist/
+*.spec.bak
+*.manifest
+
+# --- Приложение: данные пользователя (НЕ должны попадать в репозиторий) ---
+# config.json содержит Bearer-токен пользователя
+config.json
+# Скачанные медиа
+downloads/
+*.log
+downloads/.logs/
+
+# --- IDE ---
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# --- Инструменты агента (не часть проекта) ---
+.zcode/
+.agents/
+
+# --- ОС ---
+.DS_Store
+Thumbs.db
+desktop.ini

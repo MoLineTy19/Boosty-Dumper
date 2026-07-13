@@ -1,0 +1,172 @@
+/* Тёмная тема BoostyDumper.
+   Цвета: фон #1e1f22 / панели #2b2d31 / акцент #f74888 (бренд Boosty).
+   Qt-стили хорошо ложатся на QSS, поэтому здесь обычный CSS-подобный синтаксис. */
+
+QWidget {
+    background-color: #1e1f22;
+    color: #e6e6e6;
+    font-family: "Segoe UI", "Inter", "Arial", sans-serif;
+    font-size: 13px;
+}
+
+QMainWindow,
+QDialog {
+    background-color: #1e1f22;
+}
+
+QGroupBox {
+    background-color: #2b2d31;
+    border: 1px solid #3a3d42;
+    border-radius: 8px;
+    margin-top: 14px;
+    padding: 10px 10px 8px 10px;
+    font-weight: 600;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    left: 12px;
+    padding: 0 6px;
+    color: #f74888;
+}
+
+QLabel {
+    background: transparent;
+    color: #c9ccd1;
+}
+
+QLineEdit,
+QSpinBox,
+QPlainTextEdit {
+    background-color: #1e1f22;
+    color: #e6e6e6;
+    border: 1px solid #3a3d42;
+    border-radius: 6px;
+    padding: 6px 8px;
+    selection-background-color: #f74888;
+    selection-color: #ffffff;
+}
+
+QLineEdit:focus,
+QSpinBox:focus,
+QPlainTextEdit:focus {
+    border: 1px solid #f74888;
+}
+
+QLineEdit:disabled,
+QSpinBox:disabled,
+QPlainTextEdit:disabled {
+    color: #6b6e74;
+}
+
+QCheckBox {
+    background: transparent;
+    spacing: 8px;
+}
+
+QCheckBox::indicator {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #4a4d53;
+    border-radius: 4px;
+    background-color: #1e1f22;
+}
+
+QCheckBox::indicator:hover {
+    border: 1px solid #f74888;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #f74888;
+    border: 1px solid #f74888;
+    image: none;
+}
+
+QPushButton {
+    background-color: #f74888;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 18px;
+    font-weight: 600;
+}
+
+QPushButton:hover {
+    background-color: #ff5e9b;
+}
+
+QPushButton:pressed {
+    background-color: #d93774;
+}
+
+QPushButton:disabled {
+    background-color: #4a4d53;
+    color: #9aa0a6;
+}
+
+QPushButton:default {
+    border: 1px solid #ff5e9b;
+}
+
+QProgressBar {
+    background-color: #1e1f22;
+    border: 1px solid #3a3d42;
+    border-radius: 6px;
+    text-align: center;
+    color: #e6e6e6;
+    height: 20px;
+}
+
+QProgressBar::chunk {
+    background-color: #f74888;
+    border-radius: 5px;
+}
+
+QMenuBar {
+    background-color: #2b2d31;
+    color: #e6e6e6;
+    border-bottom: 1px solid #3a3d42;
+}
+
+QMenuBar::item:selected {
+    background-color: #3a3d42;
+}
+
+QMenu {
+    background-color: #2b2d31;
+    border: 1px solid #3a3d42;
+}
+
+QMenu::item:selected {
+    background-color: #f74888;
+    color: #ffffff;
+}
+
+QPlainTextEdit#log_view {
+    background-color: #161719;
+    border: 1px solid #3a3d42;
+    font-family: "Cascadia Code", "Consolas", "Courier New", monospace;
+    font-size: 12px;
+}
+
+QScrollBar:vertical {
+    background: #1e1f22;
+    width: 12px;
+    margin: 0;
+}
+
+QScrollBar::handle:vertical {
+    background: #3a3d42;
+    border-radius: 6px;
+    min-height: 24px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #4a4d53;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0;
+}

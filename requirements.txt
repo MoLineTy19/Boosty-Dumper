@@ -1,0 +1,3 @@
+# Runtime-зависимости BoostyDumper
+requests>=2.32,<3
+PySide6>=6.7,<7

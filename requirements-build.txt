@@ -1,0 +1,3 @@
+# Зависимости для сборки одиночного .exe.
+# Устанавливать при сборке: pip install -r requirements-build.txt
+pyinstaller>=6.6,<7
